@@ -2203,6 +2203,7 @@ img, video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 15%;
 }
 
 .founder-quote-content {
@@ -2661,8 +2662,43 @@ img, video {
   .consultation-form-panel { padding: 40px; }
   
   .booking-wizard-card { grid-template-columns: 1fr; }
-  .booking-sidebar { height: 200px; padding: 32px; justify-content: center; }
-  .booking-main { padding: 32px; }
+  .booking-sidebar { display: none !important; }
+  .booking-main { padding: 32px 20px; }
+  
+  /* Optimize Typography & Nav for Mobile Booking */
+  .booking-main .headline-lg { font-size: 26px !important; margin-bottom: 20px !important; }
+  .booking-steps-nav { padding-bottom: 16px; margin-bottom: 24px; gap: 8px; }
+  .booking-step-indicator { font-size: 11px; }
+  .booking-step-indicator span { width: 22px; height: 22px; font-size: 11px; margin-right: 6px; }
+  
+  /* Convert 2x2 grid to Premium List Layout */
+  .booking-services-grid { grid-template-columns: 1fr; gap: 12px; margin-bottom: 24px; }
+  .booking-services-grid .select-card { 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: flex-start; 
+    text-align: left; 
+    padding: 16px 20px;
+    height: auto;
+  }
+  .booking-services-grid .select-card i { 
+    margin-bottom: 0; 
+    margin-right: 16px; 
+    font-size: 24px;
+  }
+  .booking-services-grid .select-card .select-card-title {
+    font-size: 15px;
+  }
+  .booking-services-grid .select-card p {
+    display: none; /* Hide subtitle to keep it ultra-clean and tap-friendly */
+  }
+  
+  /* Stack Calendar & Time Selection */
+  .calendar-time-layout { grid-template-columns: 1fr; gap: 20px; }
+  .time-slots { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  
+  /* Stack Step 3 Form Inputs */
+  .booking-main .grid-2 { grid-template-columns: 1fr !important; gap: 0 !important; }
   
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -3906,6 +3942,228 @@ img, video {
   .consultation-form-panel { padding: 40px 24px; }
   .consultation-form-panel .grid-2 { grid-template-columns: 1fr !important; gap: 0 !important; }
   .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 16px; }
+
+  /* ABOUT HERO MOBILE LAYOUT */
+  .about-hero {
+    height: 100svh !important;
+    padding-top: 64px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background-position: center 30% !important;
+  }
+
+  .about-hero::after {
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.20) 0%,
+      rgba(0,0,0,0.30) 35%,
+      rgba(0,0,0,0.72) 70%,
+      rgba(0,0,0,0.85) 100%
+    ) !important;
+  }
+
+  .about-hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 28px !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  .about-hero-sub {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.18em !important;
+    color: #D2691E !important;
+    margin-bottom: 12px !important;
+    display: block !important;
+    text-align: center !important;
+  }
+
+  .about-hero .display-lg {
+    font-family: 'Playfair Display', serif !important;
+    font-size: clamp(28px, 8vw, 34px) !important;
+    font-weight: 700 !important;
+    line-height: 1.18 !important;
+    color: #FFFFFF !important;
+    text-align: center !important;
+    margin-bottom: 16px !important;
+  }
+
+  .about-hero .body-lg {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+    color: rgba(255,255,255,0.82) !important;
+    text-align: center !important;
+    max-width: 300px !important;
+    margin: 0 auto 0 auto !important;
+  }
+  
+  /* ABOUT TIMELINE MOBILE LAYOUT */
+  .legacy-row {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  .legacy-row > div:first-child {
+    width: 100% !important;
+    padding: 64px 24px 40px 24px !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+  }
+
+  .legacy-row .label-lg {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.16em !important;
+    color: #D2691E !important;
+    margin-bottom: 12px !important;
+    display: block !important;
+  }
+
+  .legacy-row .display-md {
+    font-family: 'Playfair Display', serif !important;
+    font-size: clamp(26px, 7.5vw, 32px) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    color: #1A1A1A !important;
+    margin-bottom: 20px !important;
+    width: 100% !important;
+    word-wrap: normal !important;
+  }
+
+  .legacy-row .body-md {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.75 !important;
+    color: #5C5C5C !important;
+    width: 100% !important;
+    margin-bottom: 16px !important;
+  }
+  .legacy-row .body-md:last-of-type {
+    margin-bottom: 0 !important;
+  }
+
+  .legacy-timeline {
+    width: 100% !important;
+    padding: 0 24px 72px 24px !important;
+    margin-top: 48px !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+  }
+
+  .legacy-timeline::after {
+    position: absolute !important;
+    left: 44px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 2px !important;
+    background: linear-gradient(to bottom, #D2691E 0%, #E7E1D8 100%) !important;
+    z-index: 0 !important;
+    content: '' !important;
+  }
+
+  .legacy-node {
+    padding-left: 64px !important;
+    margin-bottom: 40px !important;
+    position: relative !important;
+    z-index: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+  .legacy-node:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .legacy-node::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 13px !important; 
+    top: 4px !important;
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 9999px !important;
+    background: #D2691E !important;
+    border: 3px solid #F9F7F2 !important;
+    box-shadow: 0px 0px 0px 3px rgba(210,105,30,0.25) !important;
+    z-index: 1 !important;
+    box-sizing: border-box !important;
+  }
+
+  .legacy-year {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: #D2691E !important;
+    line-height: 1.0 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .legacy-title {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #1A1A1A !important;
+    line-height: 1.3 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .legacy-desc {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+    color: #5C5C5C !important;
+    margin: 0 !important;
+  }
+
+  /* ABOUT FOUNDER BANNER MOBILE LAYOUT */
+  .founder-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .founder-img-wrapper {
+    height: 320px !important;
+    width: 100% !important;
+  }
+
+  .founder-img {
+    object-position: center 15% !important;
+  }
+  
+  .founder-quote-content {
+    padding: 32px 24px 40px 24px !important;
+  }
+
+  .founder-quote-text {
+    font-size: 26px !important;
+    margin-bottom: 24px !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* COLLECTIVE (TEAM) MOBILE LAYOUT */
+  .team-img-wrapper {
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+  .team-img {
+    object-position: center 0%;
+  }
+
+
   
   /* FOOTER */
   .footer-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
