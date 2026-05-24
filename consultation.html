@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule Consultation — UrbanNest Interiors</title>
+  <meta name="description" content="Schedule a session with one of our senior spatial designers. Walk through the multi-step appointment manager to pick dates and available slots.">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Core Design System master style -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cinematic Cursor Indicators -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- STICKY FLOATING GLASS NAVBAR -->
+  <div class="navbar-container">
+    <nav class="navbar" id="navbar">
+      <a href="index.html" class="nav-logo">
+        Urban<span>Nest</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#portfolio" class="nav-link">Projects</a></li>
+        <li><a href="index.html#estimator" class="nav-link">Pricing</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="navbar-right">
+        <a href="consultation.html" class="btn btn-primary navbar-cta" style="padding: 12px 24px; font-size: 11px;">
+          Book Consultation
+        </a>
+        <button class="mobile-hamburger" style="display: none;"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- MOBILE BOTTOM THUMB-NAVIGATION -->
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-item">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="index.html#portfolio" class="mobile-nav-item">
+      <i class="fas fa-images"></i>
+      <span>Projects</span>
+    </a>
+    <a href="index.html#estimator" class="mobile-nav-item">
+      <i class="fas fa-calculator"></i>
+      <span>Estimator</span>
+    </a>
+    <a href="consultation.html" class="mobile-nav-item active">
+      <i class="fas fa-calendar-alt"></i>
+      <span>Consult</span>
+    </a>
+    <a href="index.html#contact" class="mobile-nav-item">
+      <i class="fas fa-envelope"></i>
+      <span>Contact</span>
+    </a>
+  </div>
+
+  <!-- STATEFUL MULTI-STEP BOOKING CARD WRAPPER -->
+  <main class="consultation-booking-wrapper">
+    <div class="container">
+      <div class="booking-wizard-card">
+        <!-- Left: Split Quote Panel with high-end bedroom visual backdrop -->
+        <div class="booking-sidebar" style="background-image: url('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=600');">
+          <div class="booking-sidebar-content">
+            <span class="label-md" style="color: var(--tertiary-light); display: block; margin-bottom: 8px;">Urban Excellence</span>
+            <p class="booking-sidebar-quote">"Design is not just what it looks like, it's how it feels."</p>
+            <p class="body-sm" style="opacity: 0.85;">Our lead spatial architects are ready to transform your floor plans into a premium living masterpiece.</p>
+          </div>
+        </div>
+
+        <!-- Right: Multi-Step Interactive Scheduler Form -->
+        <div class="booking-main">
+          <span class="label-md" style="color: var(--primary); display: block; margin-bottom: 8px;">Interactive Scheduler</span>
+          <h2 class="headline-lg" style="margin-bottom: 24px;">Book Your Dream Consultation</h2>
+
+          <!-- Steps Progress Indicators -->
+          <div class="booking-steps-nav">
+            <div class="booking-step-indicator active">
+              <span>1</span> Choose Service
+            </div>
+            <div class="booking-step-indicator">
+              <span>2</span> Select Time
+            </div>
+            <div class="booking-step-indicator">
+              <span>3</span> Fill Details
+            </div>
+          </div>
+
+          <form action="javascript:void(0);" id="booking-wizard-form">
+            <!-- Step 1: Choose Service Scope -->
+            <div class="booking-section booking-section-service active">
+              <h3 class="title-lg" style="margin-bottom: 20px;">What are we designing?</h3>
+              <div class="booking-services-grid">
+                <!-- Card 1: Residential -->
+                <div class="select-card active" data-service="residential">
+                  <i class="fas fa-home"></i>
+                  <span class="select-card-title">Residential</span>
+                  <p style="font-size: 10px; color: var(--text-secondary); margin-top: 4px;">Full home interior layout planning.</p>
+                </div>
+                <!-- Card 2: Kitchen -->
+                <div class="select-card" data-service="kitchen">
+                  <i class="fas fa-utensils"></i>
+                  <span class="select-card-title">Modular Kitchen</span>
+                  <p style="font-size: 10px; color: var(--text-secondary); margin-top: 4px;">Ergonomic setups with modular finishes.</p>
+                </div>
+                <!-- Card 3: Office -->
+                <div class="select-card" data-service="office">
+                  <i class="fas fa-briefcase"></i>
+                  <span class="select-card-title">Office Space</span>
+                  <p style="font-size: 10px; color: var(--text-secondary); margin-top: 4px;">Concentration work suites for companies.</p>
+                </div>
+                <!-- Card 4: Sustainable -->
+                <div class="select-card" data-service="sustainable">
+                  <i class="fas fa-leaf"></i>
+                  <span class="select-card-title">Sustainable</span>
+                  <p style="font-size: 10px; color: var(--text-secondary); margin-top: 4px;">Eco-friendly carbon-neutral setups.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Swappable Datepicker and Time Slots -->
+            <div class="booking-section booking-section-datetime">
+              <h3 class="title-lg" style="margin-bottom: 20px;">Select your preferred slot</h3>
+              <div class="calendar-time-layout">
+                <!-- Date input block -->
+                <div class="input-group">
+                  <label class="input-label" for="booking-date-input">Select Date</label>
+                  <input type="date" class="input-field" id="booking-date-input" required>
+                </div>
+                <!-- Time slot grid selection -->
+                <div>
+                  <span class="input-label">Available Slots (Golden Hour)</span>
+                  <div class="time-slots">
+                    <div class="time-slot" data-time="10:00 AM">10:00 AM</div>
+                    <div class="time-slot" data-time="11:30 AM">11:30 AM</div>
+                    <div class="time-slot" data-time="02:00 PM">02:00 PM</div>
+                    <div class="time-slot" data-time="04:30 PM">04:30 PM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Customer Information Submission -->
+            <div class="booking-section booking-section-details">
+              <h3 class="title-lg" style="margin-bottom: 20px;">Provide Contact Details</h3>
+              <div class="input-group">
+                <label class="input-label" for="booking-name">Full Name</label>
+                <input type="text" class="input-field" id="booking-name" placeholder="Raj Shah" required>
+              </div>
+              <div class="grid-2" style="gap: 16px;">
+                <div class="input-group">
+                  <label class="input-label" for="booking-email">Email Address</label>
+                  <input type="email" class="input-field" id="booking-email" placeholder="raj@domain.com" required>
+                </div>
+                <div class="input-group">
+                  <label class="input-label" for="booking-phone">Phone Number</label>
+                  <input type="tel" class="input-field" id="booking-phone" placeholder="+91 98765 43210" required>
+                </div>
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="booking-floorplan">Upload Floor Plan (Optional)</label>
+                <input type="file" class="input-field" id="booking-floorplan" style="padding: 12px 20px;">
+              </div>
+            </div>
+
+            <!-- Step 4: Success Confirmation Modal state -->
+            <div class="booking-section booking-section-success">
+              <div class="success-card">
+                <div class="success-icon flex-center">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <h3 class="headline-md" style="color: var(--success);">Appointment Confirmed!</h3>
+                <p class="body-md" style="color: var(--text-secondary); max-width: 450px; margin: 0 auto; line-height: 1.6;">
+                  Your consultation is scheduled on <strong>2026-05-25</strong> at <strong>11:30 AM</strong>.<br>We have sent a Zoom confirmation link to your email.
+                </p>
+                <a href="index.html" class="btn btn-outline" style="margin-top: 16px; font-size: 11px;">
+                  Return to Home
+                </a>
+              </div>
+            </div>
+
+            <!-- Footer navigation actions controls -->
+            <div class="booking-actions">
+              <button type="button" class="btn btn-outline" id="booking-prev-btn" style="padding: 12px 28px; font-size: 11px;">
+                <i class="fas fa-arrow-left"></i> Back
+              </button>
+              <button type="button" class="btn btn-primary" id="booking-next-btn" style="padding: 12px 28px; font-size: 11px;">
+                Select Time <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- MULTI-COLUMN FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <h2>Urban<span>Nest</span></h2>
+          <p>
+            Redefining residential space layout through warm organic architecture, transparent budgeting, and execution craftsmanship.
+          </p>
+          <div class="footer-socials">
+            <a href="javascript:void(0);" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="javascript:void(0);" class="footer-social-icon"><i class="fab fa-pinterest"></i></a>
+            <a href="javascript:void(0);" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="javascript:void(0);" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Services Links -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li><a href="consultation.html">Residential Design</a></li>
+            <li><a href="consultation.html">Modular Kitchens</a></li>
+            <li><a href="consultation.html">Office Layouts</a></li>
+            <li><a href="consultation.html">Smart-Home Integrations</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Legacy</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="consultation.html">Book Consultant</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+          <h3>Inspiration Feed</h3>
+          <p>Subscribe to receive our seasonal modern architectural digest catalogs directly.</p>
+          <form class="newsletter-form" action="javascript:void(0);" onsubmit="alert('Thank you for subscribing! Your seasonal modern digest is on the way.'); this.reset();">
+            <input type="email" placeholder="email@domain.com" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 UrbanNest Interiors. Architectural Elegance Redefined.</span>
+        <span>Made with ❤️ for Fine Living.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Javascript code -->
+  <script src="script.js"></script>
+</body>
+</html>

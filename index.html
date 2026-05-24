@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UrbanNest Interiors — Premium Modern Design Studio</title>
+  <meta name="description" content="UrbanNest Luxe is a premium modern interior design studio. We design high-end, responsive, smart-ready spaces. Estimate your interior project and book a free 3D design consultation today.">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Core Design System master style -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cinematic Cursor Indicators -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- STICKY FLOATING GLASS NAVBAR -->
+  <div class="navbar-container">
+    <nav class="navbar" id="navbar">
+      <a href="index.html" class="nav-logo">
+        Urban<span>Nest</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#portfolio" class="nav-link">Projects</a></li>
+        <li><a href="index.html#estimator" class="nav-link">Pricing</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="navbar-right">
+        <a href="consultation.html" class="btn btn-primary navbar-cta" style="padding: 12px 24px; font-size: 11px;">
+          Book Consultation
+        </a>
+        <button class="mobile-hamburger" style="display: none;"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- MOBILE BOTTOM THUMB-NAVIGATION -->
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-item active">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="index.html#portfolio" class="mobile-nav-item">
+      <i class="fas fa-images"></i>
+      <span>Projects</span>
+    </a>
+    <a href="index.html#estimator" class="mobile-nav-item">
+      <i class="fas fa-calculator"></i>
+      <span>Estimator</span>
+    </a>
+    <a href="consultation.html" class="mobile-nav-item">
+      <i class="fas fa-calendar-alt"></i>
+      <span>Consult</span>
+    </a>
+    <a href="index.html#contact" class="mobile-nav-item">
+      <i class="fas fa-envelope"></i>
+      <span>Contact</span>
+    </a>
+  </div>
+
+  <!-- SECTION 1: HERO ENTRANCE LOBBY -->
+  <header class="hero">
+    <div class="hero-bg-container">
+      <!-- Auto cycling luxury room transitions -->
+      <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200');"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=1200');"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=1200');"></div>
+    </div>
+
+    <div class="hero-content">
+      <h1 class="display-xl hero-title">Designing Spaces That Feel Like Home</h1>
+      <p class="hero-sub">Premium Warm Minimalist Interiors Crafted for Contemporary Smart Living</p>
+      
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn btn-primary">Explore Projects</a>
+        <a href="consultation.html" class="btn btn-secondary">Get Free Consultation</a>
+      </div>
+    </div>
+
+    <!-- Floating Statistics Cards -->
+    <div class="hero-stats-container">
+      <div class="stats-glass-card">
+        <div class="stats-number">250+</div>
+        <div class="stats-text">Projects<br>Delivered</div>
+      </div>
+      <div class="stats-glass-card" style="justify-content: flex-end;">
+        <div class="stats-number">4.9</div>
+        <div class="stats-text">Client<br>Rating ★</div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" onclick="document.getElementById('services').scrollIntoView();">
+      <span class="label-md">Scroll to Enter</span>
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2: IMMERSIVE SERVICE GRID (DIFFERENT ROOMS) -->
+  <section class="section-padding reveal-fade-up" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-lg section-label">Design Services</span>
+        <h2 class="display-md">Walkthrough Our Design Rooms</h2>
+        <p class="body-lg" style="color: var(--text-secondary); margin-top: 16px;">
+          Every corner of your residence deserves dedicated focus. Choose from our luxury spatial layout concepts.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Card 1: Residential -->
+        <div class="service-card" onclick="openServiceModal('residential');">
+          <img src="./living_space.png" alt="Residential Living Rooms" class="service-img">
+          <div class="service-content">
+            <span class="label-md" style="color: var(--tertiary-light);">01 / Living Room</span>
+            <h3 class="title-lg service-title">Residential Design</h3>
+            <p class="service-desc">Sophisticated space planning with comfortable, premium layout arrangements for bespoke modern living.</p>
+            <div class="service-cta">
+              <span>View Concepts</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Kitchen -->
+        <div class="service-card" onclick="openServiceModal('kitchen');">
+          <img src="./modular_kitchen.png" alt="Modular Kitchen" class="service-img">
+          <div class="service-content">
+            <span class="label-md" style="color: var(--tertiary-light);">02 / Culinary Studio</span>
+            <h3 class="title-lg service-title">Modular Kitchens</h3>
+            <p class="service-desc">Ergonomic marble culinary worktops combined with completely hidden custom storage profiles.</p>
+            <div class="service-cta">
+              <span>View Concepts</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Office -->
+        <div class="service-card" onclick="openServiceModal('office');">
+          <img src="./modern_workspace.png" alt="Office Design" class="service-img">
+          <div class="service-content">
+            <span class="label-md" style="color: var(--tertiary-light);">03 / Executive Suite</span>
+            <h3 class="title-lg service-title">Office Spaces</h3>
+            <p class="service-desc">Bespoke task lighting and custom ergonomic workspace plans built for deep concentration and productivity.</p>
+            <div class="service-cta">
+              <span>View Concepts</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: BEFORE & AFTER TRANSFORMATION -->
+  <section class="section-padding transformation-wrapper reveal-fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="display-md">From Concrete to Masterpiece</h2>
+        <p class="body-lg" style="color: var(--text-secondary); margin-top: 16px;">
+          Drag the floating divider to reveal how our designers transform raw structural concrete blocks into elegant architectural homes.
+        </p>
+      </div>
+
+      <!-- Draggable Image Slider -->
+      <div class="slider-container">
+        <!-- Before slide (behind) -->
+        <div class="slider-img slider-img-before" style="background-image: url('./before.png');">
+          <span class="slider-label slider-label-before">BEFORE</span>
+        </div>
+        
+        <!-- After slide (covers and clips) -->
+        <div class="slider-img slider-img-after" style="background-image: url('./after.png');">
+          <span class="slider-label slider-label-after">AFTER (LUXURY HOME)</span>
+        </div>
+
+        <!-- Slider Divider Handle -->
+        <div class="slider-handle">
+          <div class="slider-handle-button">
+            <i class="fas fa-arrows-alt-h"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: WHY URBANNEST (ZIG-ZAG STORYTELLING) -->
+  <section class="section-padding reveal-fade-up">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-lg section-label">Why UrbanNest</span>
+        <h2 class="display-md">Designed to Inspire Everyday Living</h2>
+      </div>
+
+      <!-- Story 1 -->
+      <div class="story-row">
+        <div class="story-img-container">
+          <div class="story-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=600" alt="Personalized Design Concepts" class="story-img">
+          </div>
+          <div class="story-floating-card">
+            <h4 class="story-floating-title">Bespoke Planning</h4>
+            <p class="story-floating-desc">Every piece is conceptualized specifically for your layout requirements.</p>
+          </div>
+        </div>
+        <div class="story-content">
+          <div class="story-number">01</div>
+          <h3 class="display-md story-title">Personalized Design Concepts</h3>
+          <p class="body-md story-desc">
+            We don't repeat layouts. Our lead space planning architects draft layouts that match your daily workflow, storage needs, and aesthetic vision.
+          </p>
+          <ul class="story-bullet-list">
+            <li class="story-bullet-item"><i class="fas fa-check-circle"></i> Custom furniture blueprints</li>
+            <li class="story-bullet-item"><i class="fas fa-check-circle"></i> Adaptive custom layout drafting</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Story 2 -->
+      <div class="story-row">
+        <div class="story-img-container">
+          <div class="story-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80&w=600" alt="Transparent Material Pricing" class="story-img">
+          </div>
+          <div class="story-floating-card" style="border-color: var(--secondary);">
+            <h4 class="story-floating-title">100% Transparent</h4>
+            <p class="story-floating-desc">Detailed invoices listing raw brand materials with zero hidden charges.</p>
+          </div>
+        </div>
+        <div class="story-content">
+          <div class="story-number">02</div>
+          <h3 class="display-md story-title">Completely Transparent Estimations</h3>
+          <p class="body-md story-desc">
+            No unexpected invoices. We provide complete material catalogs with grade certificates, warranty documents, and cost breakdowns upfront.
+          </p>
+          <ul class="story-bullet-list">
+            <li class="story-bullet-item"><i class="fas fa-check-circle"></i> Direct distributor material procurement</li>
+            <li class="story-bullet-item"><i class="fas fa-check-circle"></i> Explicit, itemized labor logs</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Story 3 -->
+      <div class="story-row">
+        <div class="story-img-container">
+          <div class="story-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=80&w=600" alt="Immersive 3D Previews" class="story-img">
+          </div>
+          <div class="story-floating-card" style="border-color: var(--tertiary);">
+            <h4 class="story-floating-title">3D VR walkthroughs</h4>
+            <p class="story-floating-desc">Walk through your exact apartment configuration before laying a single brick.</p>
+          </div>
+        </div>
+        <div class="story-content">
+          <div class="story-number">03</div>
+          <h3 class="display-md story-title">Photorealistic 3D Visualizations</h3>
+          <p class="body-md story-desc">
+            Never guess how textures match. Our high-fidelity rendering engines provide virtual tours showcasing fabrics, stone finishes, and warm architectural lighting.
+          </p>
+          <ul class="story-bullet-list">
+            <li class="story-bullet-item"><i class="fas fa-check-circle"></i> Live color-swapping sessions</li>
+            <li class="story-bullet-item"><i class="fas fa-check-circle"></i> Strict 1:1 render-to-reality execution</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION 5: PROJECT PORTFOLIO (EDITORIAL MASONRY GALLERY) -->
+  <section class="section-padding reveal-fade-up" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-lg section-label">Portfolio Gallery</span>
+        <h2 class="display-md">Luxury Redefined</h2>
+        <p class="body-lg" style="color: var(--text-secondary); margin-top: 16px;">
+          Explore some of our residential and commercial layouts curated around warm minimalist aesthetics.
+        </p>
+      </div>
+
+      <!-- Filters -->
+      <div class="portfolio-filters">
+        <div class="filter-chip active" data-filter="all">All Projects</div>
+        <div class="filter-chip" data-filter="apartments">Apartments</div>
+        <div class="filter-chip" data-filter="villas">Luxury Villas</div>
+        <div class="filter-chip" data-filter="offices">Creative Offices</div>
+        <div class="filter-chip" data-filter="kitchens">Kitchens</div>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="portfolio-masonry">
+        <!-- Item 1: Apartments -->
+        <div class="portfolio-item" data-categories="apartments">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=600" alt="Warm Minimal Lounge" class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span class="label-md portfolio-category">Apartments / Lounge</span>
+            <h4 class="title-lg portfolio-title">The Aurelia Residence</h4>
+            <div class="portfolio-details">
+              <span>Size: 1,850 sq.ft</span>
+              <span>Budget: Premium</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Villas -->
+        <div class="portfolio-item" data-categories="villas">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=600" alt="Architectural Stairs Villa" class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span class="label-md portfolio-category">Luxury Villas</span>
+            <h4 class="title-lg portfolio-title">Casa de Luz Penthouse</h4>
+            <div class="portfolio-details">
+              <span>Size: 4,200 sq.ft</span>
+              <span>Budget: Elite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Kitchens -->
+        <div class="portfolio-item" data-categories="kitchens">
+          <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&q=80&w=600" alt="Marble kitchen layout" class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span class="label-md portfolio-category">Modular Kitchens</span>
+            <h4 class="title-lg portfolio-title">The Terrazzo Culinary Studio</h4>
+            <div class="portfolio-details">
+              <span>Size: 320 sq.ft</span>
+              <span>Budget: Custom</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Offices -->
+        <div class="portfolio-item" data-categories="offices">
+          <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600" alt="Concentric workspace design" class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span class="label-md portfolio-category">Creative Offices</span>
+            <h4 class="title-lg portfolio-title">Vellum Studio Head Office</h4>
+            <div class="portfolio-details">
+              <span>Size: 2,400 sq.ft</span>
+              <span>Budget: High-end</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Villas -->
+        <div class="portfolio-item" data-categories="villas apartments">
+          <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&q=80&w=600" alt="Velvet furniture lounge" class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span class="label-md portfolio-category">Luxury Villas / Lounge</span>
+            <h4 class="title-lg portfolio-title">The Glass Pavilion</h4>
+            <div class="portfolio-details">
+              <span>Size: 3,600 sq.ft</span>
+              <span>Budget: Elite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Apartments -->
+        <div class="portfolio-item" data-categories="apartments">
+          <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=600" alt="Monolithic Master Bathroom" class="portfolio-img">
+          <div class="portfolio-overlay">
+            <span class="label-md portfolio-category">Apartments / Bath</span>
+            <h4 class="title-lg portfolio-title">Travertine Monolith Suite</h4>
+            <div class="portfolio-details">
+              <span>Size: 240 sq.ft</span>
+              <span>Budget: Premium</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: PRICING ESTIMATOR (Luxury Material Selector Studio Configurator) -->
+  <section class="section-padding estimator-wrapper reveal-fade-up" id="estimator">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-lg section-label">Interactive Configurator</span>
+        <h2 class="display-md">Estimate Your Project Cost</h2>
+        <p class="body-lg" style="color: var(--text-secondary); margin-top: 16px;">
+          Configure your layout choices, and compute realistic material estimations and execution timelines immediately.
+        </p>
+      </div>
+
+      <!-- Estimator Wizard Board -->
+      <div class="estimator-container">
+        <!-- Progress Bar Indicator -->
+        <div class="estimator-progress">
+          <div class="estimator-progress-bar"></div>
+        </div>
+
+        <!-- Step 1: Property Type -->
+        <div class="estimator-step active step-property">
+          <h3 class="title-lg step-title">Step 1: Choose Your Project Scope</h3>
+          <div class="selector-grid">
+            <div class="select-card active" data-type="residential">
+              <i class="fas fa-home"></i>
+              <span class="select-card-title">Residential Home</span>
+            </div>
+            <div class="select-card" data-type="kitchen">
+              <i class="fas fa-utensils"></i>
+              <span class="select-card-title">Modular Kitchen</span>
+            </div>
+            <div class="select-card" data-type="office">
+              <i class="fas fa-briefcase"></i>
+              <span class="select-card-title">Office Setup</span>
+            </div>
+            <div class="select-card" data-type="sustainable">
+              <i class="fas fa-leaf"></i>
+              <span class="select-card-title">Eco-Sustainable</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Number of Rooms -->
+        <div class="estimator-step step-rooms">
+          <h3 class="title-lg step-title">Step 2: How many rooms require design?</h3>
+          <div class="selector-grid">
+            <div class="select-card" data-rooms="1">
+              <i class="fas fa-door-closed"></i>
+              <span class="select-card-title">Single Room / Area</span>
+            </div>
+            <div class="select-card active" data-rooms="2">
+              <i class="fas fa-building"></i>
+              <span class="select-card-title">2 to 3 BHK Home</span>
+            </div>
+            <div class="select-card" data-rooms="3">
+              <i class="fas fa-cubes"></i>
+              <span class="select-card-title">4+ BHK Residence</span>
+            </div>
+            <div class="select-card" data-rooms="4">
+              <i class="fas fa-hotel"></i>
+              <span class="select-card-title">Full Luxury Villa</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Design Style -->
+        <div class="estimator-step step-style">
+          <h3 class="title-lg step-title">Step 3: Select Your Design Vibe</h3>
+          <div class="selector-grid">
+            <div class="select-card active" data-style="warm">
+              <i class="fas fa-sun"></i>
+              <span class="select-card-title">Warm Minimalist</span>
+            </div>
+            <div class="select-card" data-style="minimalist">
+              <i class="fas fa-minus"></i>
+              <span class="select-card-title">Editorial Minimal</span>
+            </div>
+            <div class="select-card" data-style="luxe">
+              <i class="fas fa-gem"></i>
+              <span class="select-card-title">Luxe Classic</span>
+            </div>
+            <div class="select-card" data-style="editorial">
+              <i class="fas fa-feather-alt"></i>
+              <span class="select-card-title">Architectural/Editorial</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Budget Range Selector -->
+        <div class="estimator-step">
+          <h3 class="title-lg step-title">Step 4: Select Material Quality Tier</h3>
+          <div class="range-container">
+            <input type="range" min="0" max="100" value="50" class="range-slider" id="budget-range-slider">
+            <div class="range-labels">
+              <span>Standard Premium (Solid Laminates)</span>
+              <span>Luxury Tier (Veneer & Acrylics)</span>
+              <span>Elite Showroom (Imported Marbles)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5: Smart Swappable Features -->
+        <div class="estimator-step">
+          <h3 class="title-lg step-title">Step 5: Integrate Automated Smart Home Systems?</h3>
+          <div class="smart-features-panel" style="background: none; border-color: var(--border); margin-top: 20px;">
+            <div>
+              <span class="smart-label" style="display: block; font-weight: 600; color: var(--text-primary);">Integrated Smart Home Automation</span>
+              <span style="font-size: 13px; color: var(--text-secondary);">Includes central panel IoT lighting controls and motorized shade adapters.</span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="smart-ready-switch">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Output Dynamic Calculation Card -->
+        <div class="estimator-result-card">
+          <span class="result-label">Calculated Project Estimate Range</span>
+          <div class="result-price">₹3.5L - ₹4.5L</div>
+          <span class="result-timeline" style="font-size: 14px; color: var(--text-secondary);">Timeline: <strong>45–60 Days</strong></span>
+          
+          <!-- Key features tags dynamic container -->
+          <div class="result-features">
+            <span class="result-feature-tag">Complete spatial planning</span>
+            <span class="result-feature-tag">Ambient golden lighting design</span>
+          </div>
+          <p style="font-size: 11px; color: var(--text-muted); margin-top: 8px;">
+            *Estimates include direct material procurement, custom designer commissions, and account management.
+          </p>
+        </div>
+
+        <!-- Estimator actions footer controls -->
+        <div class="estimator-actions">
+          <button class="btn btn-outline" id="prev-step-btn" style="padding: 12px 28px; font-size: 11px;">
+            <i class="fas fa-arrow-left"></i> Previous
+          </button>
+          <button class="btn btn-primary" id="next-step-btn" style="padding: 12px 28px; font-size: 11px;">
+            Next Step <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: PROCESS TIMELINE (HORIZONTAL SCROLL) -->
+  <section class="section-padding reveal-fade-up" id="execution-stages">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-lg section-label">Execution Stages</span>
+        <h2 class="display-md">Our Step-by-Step Process</h2>
+        <p class="body-lg" style="color: var(--text-secondary); margin-top: 16px;">
+          A simple, completely organized roadmap guiding you from initial sketchlines to move-in key handover.
+        </p>
+      </div>
+
+      <!-- Horizontal Scrollable Container -->
+      <div class="timeline-scroll-wrapper">
+        <div class="timeline-track"></div>
+
+        <!-- Step 1 -->
+        <div class="timeline-step">
+          <div class="timeline-node flex-center">
+            <i class="fas fa-comments"></i>
+          </div>
+          <span class="timeline-step-duration">Stage 01 — Day 01</span>
+          <h4 class="timeline-step-title">Initial Consultation</h4>
+          <p class="timeline-step-desc">Brainstorming layout preferences, materials, and stylistic desires.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-step">
+          <div class="timeline-node flex-center">
+            <i class="fas fa-pencil-ruler"></i>
+          </div>
+          <span class="timeline-step-duration">Stage 02 — Day 07</span>
+          <h4 class="timeline-step-title">3D Render Drafts</h4>
+          <p class="timeline-step-desc">Refining high-fidelity visual representations of your finished apartment.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-step">
+          <div class="timeline-node flex-center">
+            <i class="fas fa-truck-loading"></i>
+          </div>
+          <span class="timeline-step-duration">Stage 03 — Day 15</span>
+          <h4 class="timeline-step-title">Material Sourcing</h4>
+          <p class="timeline-step-desc">Direct warehouse selection of stone, woods, and customized fittings.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-step">
+          <div class="timeline-node flex-center">
+            <i class="fas fa-hammer"></i>
+          </div>
+          <span class="timeline-step-duration">Stage 04 — Day 30</span>
+          <h4 class="timeline-step-title">On-Site Execution</h4>
+          <p class="timeline-step-desc">High-precision installations managed by dedicated interior supervisors.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-step">
+          <div class="timeline-node flex-center">
+            <i class="fas fa-key"></i>
+          </div>
+          <span class="timeline-step-duration">Stage 05 — Day 45</span>
+          <h4 class="timeline-step-title">Handover & Move-In</h4>
+          <p class="timeline-step-desc">Deep cleaning, visual inspection checks, and final key handover.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: TESTIMONIAL BOARD -->
+  <section class="section-padding testimonials-wrapper reveal-fade-up">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-lg section-label">Client Reviews</span>
+        <h2 class="display-md">Trusted by Modern Homeowners</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "UrbanNest completely reimagined our standard BHK flat. The custom wood panelling and hidden cabinet profiles make our room feel double the size."
+          </p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120" alt="Rahul Malhotra Avatar">
+            </div>
+            <div class="testimonial-info">
+              <h4>Rahul Malhotra</h4>
+              <p>DLF Phase 5, Gurgaon</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "100% transparent pricing. Every invoice listed exact distributor prices. No surprises, and completed strictly on the 45th execution day!"
+          </p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120" alt="Ananya Sharma Avatar">
+            </div>
+            <div class="testimonial-info">
+              <h4>Ananya Sharma</h4>
+              <p>Hiranandani Estate, Mumbai</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "The 3D virtual preview sessions were incredible. We selected stone veneer switches and wall hues and saw exactly how they blended beforehand."
+          </p>
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=120" alt="Elena Rostova Avatar">
+            </div>
+            <div class="testimonial-info">
+              <h4>Elena Rostova</h4>
+              <p>Whitefield, Bangalore</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: SPLIT CONSULTATION CTA -->
+  <section class="section-padding consultation-wrapper reveal-fade-up" id="contact">
+    <div class="container">
+      <div class="consultation-grid">
+        <!-- Left panel quote -->
+        <div class="consultation-image-panel" style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800');">
+          <div class="consultation-quote-box">
+            <p class="consultation-quote">"Design is not just what it looks like, it's how it feels."</p>
+            <span class="consultation-quote-author">Steve Jobs / Architectural Axiom</span>
+          </div>
+        </div>
+
+        <!-- Right panel form -->
+        <div class="consultation-form-panel">
+          <span class="label-md" style="color: var(--primary); display: block; margin-bottom: 8px;">Get in Touch</span>
+          <h2 class="display-md" style="margin-bottom: var(--spacing-md);">Start Your Design Journey</h2>
+          <p class="body-md" style="color: var(--text-secondary); margin-bottom: var(--spacing-lg);">
+            Schedule a session with one of our senior spatial designers to map out your apartment requirements.
+          </p>
+
+          <form action="javascript:void(0);" onsubmit="alert('Thank you for initiating your design journey! Our senior designer will reach out via phone in 2 hours.'); this.reset();">
+            <div class="input-group">
+              <label class="input-label" for="journey-name">Full Name</label>
+              <input type="text" class="input-field" id="journey-name" placeholder="Rahul Sen" required>
+            </div>
+            
+            <div class="input-group">
+              <label class="input-label" for="journey-email">Email Address</label>
+              <input type="email" class="input-field" id="journey-email" placeholder="rahul@domain.com" required>
+            </div>
+
+            <div class="grid-2" style="gap: 16px;">
+              <div class="input-group">
+                <label class="input-label" for="journey-phone">Phone Number</label>
+                <input type="tel" class="input-field" id="journey-phone" placeholder="+91 98765 43210" required>
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="journey-date">Preferred Date</label>
+                <input type="date" class="input-field" id="journey-date" required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">
+              Request Free Design Consultation <i class="fas fa-calendar-check" style="margin-left: 8px;"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- SECTION 12: MULTI-COLUMN FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <h2>Urban<span>Nest</span></h2>
+          <p>
+            Redefining residential space layout through warm organic architecture, transparent budgeting, and execution craftsmanship.
+          </p>
+          <div class="footer-socials">
+            <a href="javascript:void(0);" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="javascript:void(0);" class="footer-social-icon"><i class="fab fa-pinterest"></i></a>
+            <a href="javascript:void(0);" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="javascript:void(0);" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Services Links -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li><a href="consultation.html">Residential Design</a></li>
+            <li><a href="consultation.html">Modular Kitchens</a></li>
+            <li><a href="consultation.html">Office Layouts</a></li>
+            <li><a href="consultation.html">Smart-Home Integrations</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Legacy</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="consultation.html">Book Consultant</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+          <h3>Inspiration Feed</h3>
+          <p>Subscribe to receive our seasonal modern architectural digest catalogs directly.</p>
+          <form class="newsletter-form" action="javascript:void(0);" onsubmit="alert('Thank you for subscribing! Your seasonal modern digest is on the way.'); this.reset();">
+            <input type="email" placeholder="email@domain.com" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 UrbanNest Interiors. Architectural Elegance Redefined.</span>
+        <span>Made with ❤️ for Fine Living.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DESIGN SERVICES MODAL OVERLAY -->
+  <div id="service-modal-overlay" class="service-modal-overlay" onclick="closeServiceModal(event)">
+    <div class="service-modal" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closeServiceModal()"><i class="fas fa-times"></i></button>
+      
+      <div class="modal-hero">
+        <img id="modal-hero-img" src="" alt="Service Hero">
+      </div>
+      
+      <div class="modal-content-body">
+        <span class="label-md modal-category" id="modal-category"></span>
+        <h2 class="display-sm modal-title" id="modal-title"></h2>
+        <p class="body-lg modal-desc" id="modal-desc"></p>
+        
+        <h4 class="modal-gallery-title">PROJECT GALLERY</h4>
+        <div class="modal-gallery" id="modal-gallery">
+          <!-- Images injected via JS -->
+        </div>
+        
+        <div class="modal-footer">
+          <button class="btn btn-primary" onclick="window.location.href='consultation.html'">Get a Free Estimate <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Javascript code -->
+  <script src="script.js"></script>
+</body>
+</html>
