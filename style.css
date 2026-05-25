@@ -1544,6 +1544,7 @@ img, video {
   background: var(--border);
   outline: none;
   -webkit-appearance: none;
+  appearance: none;
   border-radius: var(--rounded-full);
 }
 
@@ -1553,6 +1554,7 @@ img, video {
 
 .range-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
+  appearance: none;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -1563,6 +1565,22 @@ img, video {
 }
 
 .range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Firefox Range Slider Thumb Support */
+.range-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+  box-shadow: var(--shadow-floating);
+  transition: transform var(--duration-fast) var(--ease-soft);
+}
+
+.range-slider::-moz-range-thumb:hover {
   transform: scale(1.2);
 }
 
