@@ -1,8 +1,28 @@
 /* ==========================================================================
    URBANNEST LUXE — Premium Cinematic Interior Design System
+   ========================================================================== 
+   
+   TABLE OF CONTENTS:
+   1. DESIGN SYSTEM VARIABLES (:root)
+   2. RESET & BASE STYLES
+   3. TYPOGRAPHY SYSTEM
+   4. LAYOUT SYSTEM & UTILITIES
+   5. STICKY FLOATING GLASS NAVBAR
+   6. MOBILE BOTTOM THUMB-NAVIGATION
+   7. HERO ENTRANCE LOBBY (SECTION 1)
+   8. IMMERSIVE SERVICE GRID (SECTION 2)
+   9. BEFORE & AFTER TRANSFORMATION (SECTION 3)
+   10. WHY URBANNEST ZIG-ZAG STORYTELLING (SECTION 4)
+   11. PROJECT PORTFOLIO MASONRY GALLERY (SECTION 5)
+   12. PRICING ESTIMATOR INTERACTIVE CONFIGURATOR (SECTION 7)
+   13. PROCESS TIMELINE & SCROLL ENGAGEMENT (SECTION 8)
+   14. TESTIMONIAL BOARD (SECTION 9)
+   15. SPLIT CONSULTATION CTA & FORM (SECTION 10)
+   16. DESIGN SERVICES MODAL OVERLAY
+   17. SYSTEM UTILITIES, CUSTOM CURSOR, & COMPONENT OVERLAYS
+   18. TRANSITIONS & DYNAMIC INTERACTION STATES
+   19. RESPONSIVE MEDIA QUERIES (TABLET & MOBILE BREAKPOINTS)
    ========================================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
   /* Colors */

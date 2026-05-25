@@ -21,6 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ==========================================================================
    1. CUSTOM PREMIUM CURSOR
    ========================================================================== */
+/**
+ * Initializes the premium custom cursor.
+ * Tracks mouse movements with linear interpolation (lerp) for smooth easing,
+ * and adds contextual hover classes (.hover, .drag) on interactive elements.
+ */
 function initCustomCursor() {
   const cursor = document.querySelector('.custom-cursor');
   const follower = document.querySelector('.custom-cursor-follower');
@@ -89,6 +94,11 @@ function initCustomCursor() {
 /* ==========================================================================
    2. SCROLL TRANSITIONS & DOCK REFLECTION
    ========================================================================== */
+/**
+ * Initializes standard scroll-triggered visual effects.
+ * Includes a glassmorphic scrolled header backdrop and Intersection Observer
+ * animations to smoothly fade sections in as they enter the viewport.
+ */
 function initScrollEffects() {
   const navbar = document.querySelector('.navbar');
   
@@ -122,6 +132,11 @@ function initScrollEffects() {
 /* ==========================================================================
    3. HERO SLIDESHOW AUTO-CYCLER
    ========================================================================== */
+/**
+ * Initializes the hero background auto-cycler.
+ * Periodically transitions between luxury architectural room views by shuffling
+ * the active slide class at predefined 6-second intervals.
+ */
 function initHeroSlider() {
   const slides = document.querySelectorAll('.hero-slide');
   if (slides.length === 0) return;
@@ -141,6 +156,11 @@ function initHeroSlider() {
 /* ==========================================================================
    4. INTERACTIVE DRAGGABLE BEFORE/AFTER SLIDER
    ========================================================================== */
+/**
+ * Initializes the draggable Before & After layout slider.
+ * Allows visitors to drag a divider panel or click the frame to reveal 
+ * raw-to-refined residential layout transformations with smooth physics interpolation.
+ */
 function initBeforeAfterSlider() {
   const container = document.querySelector('.slider-container');
   const handle = document.querySelector('.slider-handle');
@@ -214,6 +234,11 @@ function initBeforeAfterSlider() {
 /* ==========================================================================
    5. 3D WALL COLOR & FINISH VISUALIZER
    ========================================================================== */
+/**
+ * Initializes the live interactive Spatial Customizer (Visualizer).
+ * Dynamically binds click event listeners to custom wall colors, smart lighting
+ * controllers, and luxury timber finishes.
+ */
 function initRoomVisualizer() {
   const tintLayer = document.querySelector('.room-wall-tint');
   const colorDots = document.querySelectorAll('.color-dot');
@@ -282,6 +307,11 @@ function initRoomVisualizer() {
 /* ==========================================================================
    6. PRICING ESTIMATOR DESIGN STUDIO CALCULATOR
    ========================================================================== */
+/**
+ * Initializes the interactive pricing estimator configurator.
+ * Dynamically updates calculated cost ranges and delivery timelines in real-time
+ * as users toggle material tiers, room scales, style vibes, and smart home integrations.
+ */
 function initPricingEstimator() {
   const steps = document.querySelectorAll('.estimator-step');
   const prevBtn = document.getElementById('prev-step-btn');
@@ -511,6 +541,11 @@ function initPricingEstimator() {
 /* ==========================================================================
    7. STATEFUL MULTI-STEP CONSULTATION BOOKING WIZARD
    ========================================================================== */
+/**
+ * Initializes the multi-step consultation scheduling wizard.
+ * Handles form validation, interactive date and time slot configurations,
+ * progress tracking, and final appointment confirmations.
+ */
 function initBookingWizard() {
   const wizardSections = document.querySelectorAll('.booking-section');
   const stepIndicators = document.querySelectorAll('.booking-step-indicator');
@@ -667,6 +702,11 @@ function initBookingWizard() {
 /* ==========================================================================
    8. PORTFOLIO EDITORIAL GALLERY FILTER MECHANISM
    ========================================================================== */
+/**
+ * Initializes the portfolio masonry gallery filter system.
+ * Filters project cards based on categories with smooth CSS transition scaling
+ * and timing configurations.
+ */
 function initPortfolioFilter() {
   const chips = document.querySelectorAll('.portfolio-filters .filter-chip');
   const items = document.querySelectorAll('.portfolio-masonry .portfolio-item');
@@ -789,6 +829,11 @@ document.addEventListener('keydown', (e) => {
 /* ==========================================================================
    10. MOBILE SPECIFIC INTERACTIONS
    ========================================================================== */
+/**
+ * Configures mobile-only user experience patterns.
+ * Handles full-screen toggle for the responsive primary navbar, collapsed
+ * detail controls for estimator sidebar, and scroll-indicator dots for reviews.
+ */
 function initMobileInteractions() {
   if (window.innerWidth > 767) return; // Only execute on mobile
 
@@ -873,8 +918,13 @@ function initMobileInteractions() {
 }
 
 /* ==========================================================================
-   10. MOBILE TIMELINE STICKY HORIZONTAL SCROLL
+   11. MOBILE TIMELINE STICKY HORIZONTAL SCROLL
    ========================================================================== */
+/**
+ * Powers the interactive sticky vertical-to-horizontal timeline scroll section.
+ * Tracks screen scroll offsets inside the container, maps vertical scrolling
+ * into visual translateX horizontal shifts, and syncs progress indicator dots.
+ */
 function initMobileTimelineScroll() {
   const section = document.getElementById('execution-stages');
   if (!section) return;

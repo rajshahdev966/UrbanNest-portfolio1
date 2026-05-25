@@ -6,10 +6,22 @@
   <title>UrbanNest Interiors — Premium Modern Design Studio</title>
   <meta name="description" content="UrbanNest Luxe is a premium modern interior design studio. We design high-end, responsive, smart-ready spaces. Estimate your interior project and book a free 3D design consultation today.">
   
+  <!-- Resource Preloads & Connections -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="style.css" as="style">
+  
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts (Inter & Playfair Display) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
   <!-- Core Design System master style -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Core Javascript code -->
+  <script src="script.js" defer type="module"></script>
 </head>
 <body>
 
@@ -120,7 +132,7 @@
       <div class="services-grid">
         <!-- Card 1: Residential -->
         <div class="service-card" onclick="openServiceModal('residential');">
-          <img src="./living_space.png" alt="Residential Living Rooms" class="service-img">
+          <img src="./living_space.png" alt="Residential Living Rooms" class="service-img" loading="lazy" decoding="async">
           <div class="service-content">
             <span class="label-md" style="color: var(--tertiary-light);">01 / Living Room</span>
             <h3 class="title-lg service-title">Residential Design</h3>
@@ -134,7 +146,7 @@
 
         <!-- Card 2: Kitchen -->
         <div class="service-card" onclick="openServiceModal('kitchen');">
-          <img src="./modular_kitchen.png" alt="Modular Kitchen" class="service-img">
+          <img src="./modular_kitchen.png" alt="Modular Kitchen" class="service-img" loading="lazy" decoding="async">
           <div class="service-content">
             <span class="label-md" style="color: var(--tertiary-light);">02 / Culinary Studio</span>
             <h3 class="title-lg service-title">Modular Kitchens</h3>
@@ -148,7 +160,7 @@
 
         <!-- Card 3: Office -->
         <div class="service-card" onclick="openServiceModal('office');">
-          <img src="./modern_workspace.png" alt="Office Design" class="service-img">
+          <img src="./modern_workspace.png" alt="Office Design" class="service-img" loading="lazy" decoding="async">
           <div class="service-content">
             <span class="label-md" style="color: var(--tertiary-light);">03 / Executive Suite</span>
             <h3 class="title-lg service-title">Office Spaces</h3>
@@ -207,7 +219,7 @@
       <div class="story-row">
         <div class="story-img-container">
           <div class="story-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=600" alt="Personalized Design Concepts" class="story-img">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=600" alt="Personalized Design Concepts" class="story-img" loading="lazy" decoding="async">
           </div>
           <div class="story-floating-card">
             <h4 class="story-floating-title">Bespoke Planning</h4>
@@ -231,7 +243,7 @@
       <div class="story-row">
         <div class="story-img-container">
           <div class="story-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80&w=600" alt="Transparent Material Pricing" class="story-img">
+            <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80&w=600" alt="Transparent Material Pricing" class="story-img" loading="lazy" decoding="async">
           </div>
           <div class="story-floating-card" style="border-color: var(--secondary);">
             <h4 class="story-floating-title">100% Transparent</h4>
@@ -255,7 +267,7 @@
       <div class="story-row">
         <div class="story-img-container">
           <div class="story-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=80&w=600" alt="Immersive 3D Previews" class="story-img">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=80&w=600" alt="Immersive 3D Previews" class="story-img" loading="lazy" decoding="async">
           </div>
           <div class="story-floating-card" style="border-color: var(--tertiary);">
             <h4 class="story-floating-title">3D VR walkthroughs</h4>
@@ -302,7 +314,7 @@
       <div class="portfolio-masonry">
         <!-- Item 1: Apartments -->
         <div class="portfolio-item" data-categories="apartments">
-          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=600" alt="Warm Minimal Lounge" class="portfolio-img">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=600" alt="Warm Minimal Lounge" class="portfolio-img" loading="lazy" decoding="async">
           <div class="portfolio-overlay">
             <span class="label-md portfolio-category">Apartments / Lounge</span>
             <h4 class="title-lg portfolio-title">The Aurelia Residence</h4>
@@ -315,7 +327,7 @@
 
         <!-- Item 2: Villas -->
         <div class="portfolio-item" data-categories="villas">
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=600" alt="Architectural Stairs Villa" class="portfolio-img">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=600" alt="Architectural Stairs Villa" class="portfolio-img" loading="lazy" decoding="async">
           <div class="portfolio-overlay">
             <span class="label-md portfolio-category">Luxury Villas</span>
             <h4 class="title-lg portfolio-title">Casa de Luz Penthouse</h4>
@@ -328,7 +340,7 @@
 
         <!-- Item 3: Kitchens -->
         <div class="portfolio-item" data-categories="kitchens">
-          <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&q=80&w=600" alt="Marble kitchen layout" class="portfolio-img">
+          <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&q=80&w=600" alt="Marble kitchen layout" class="portfolio-img" loading="lazy" decoding="async">
           <div class="portfolio-overlay">
             <span class="label-md portfolio-category">Modular Kitchens</span>
             <h4 class="title-lg portfolio-title">The Terrazzo Culinary Studio</h4>
@@ -341,7 +353,7 @@
 
         <!-- Item 4: Offices -->
         <div class="portfolio-item" data-categories="offices">
-          <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600" alt="Concentric workspace design" class="portfolio-img">
+          <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600" alt="Concentric workspace design" class="portfolio-img" loading="lazy" decoding="async">
           <div class="portfolio-overlay">
             <span class="label-md portfolio-category">Creative Offices</span>
             <h4 class="title-lg portfolio-title">Vellum Studio Head Office</h4>
@@ -354,7 +366,7 @@
 
         <!-- Item 5: Villas -->
         <div class="portfolio-item" data-categories="villas apartments">
-          <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&q=80&w=600" alt="Velvet furniture lounge" class="portfolio-img">
+          <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&q=80&w=600" alt="Velvet furniture lounge" class="portfolio-img" loading="lazy" decoding="async">
           <div class="portfolio-overlay">
             <span class="label-md portfolio-category">Luxury Villas / Lounge</span>
             <h4 class="title-lg portfolio-title">The Glass Pavilion</h4>
@@ -367,7 +379,7 @@
 
         <!-- Item 6: Apartments -->
         <div class="portfolio-item" data-categories="apartments">
-          <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=600" alt="Monolithic Master Bathroom" class="portfolio-img">
+          <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=600" alt="Monolithic Master Bathroom" class="portfolio-img" loading="lazy" decoding="async">
           <div class="portfolio-overlay">
             <span class="label-md portfolio-category">Apartments / Bath</span>
             <h4 class="title-lg portfolio-title">Travertine Monolith Suite</h4>
@@ -612,7 +624,7 @@
           </p>
           <div class="testimonial-user">
             <div class="testimonial-avatar">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120" alt="Rahul Malhotra Avatar">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120" alt="Rahul Malhotra Avatar" loading="lazy" decoding="async">
             </div>
             <div class="testimonial-info">
               <h4>Rahul Malhotra</h4>
@@ -631,7 +643,7 @@
           </p>
           <div class="testimonial-user">
             <div class="testimonial-avatar">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120" alt="Ananya Sharma Avatar">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120" alt="Ananya Sharma Avatar" loading="lazy" decoding="async">
             </div>
             <div class="testimonial-info">
               <h4>Ananya Sharma</h4>
@@ -650,7 +662,7 @@
           </p>
           <div class="testimonial-user">
             <div class="testimonial-avatar">
-              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=120" alt="Elena Rostova Avatar">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=120" alt="Elena Rostova Avatar" loading="lazy" decoding="async">
             </div>
             <div class="testimonial-info">
               <h4>Elena Rostova</h4>
@@ -798,8 +810,5 @@
       </div>
     </div>
   </div>
-
-  <!-- Core Javascript code -->
-  <script src="script.js"></script>
 </body>
 </html>
